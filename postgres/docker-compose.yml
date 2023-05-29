@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+
+  allp-postgres:
+    image: "postgres:latest"
+    container_name: allp-postgres
+    volumes:
+      - allp-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: allp
+      POSTGRES_USER: allp
+      POSTGRES_PASSWORD: allpeep
+    restart: always
+
+volumes:
+  allp-data:
+
+
+
